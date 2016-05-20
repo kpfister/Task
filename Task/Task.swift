@@ -13,7 +13,7 @@ import CoreData
 class Task: NSManagedObject {
 
 // Insert code here to add functionality to your managed object subclass
-    convenience init(name: String, notes: String? = nil, due: NSDate? = nil, context: NSManagedObjectContext = Stack.sharedStack.managedObjectContext) {
+    convenience init(name: String, notes: String? = nil, due: NSDate? = nil, isComplete: Bool, context: NSManagedObjectContext = Stack.sharedStack.managedObjectContext) {
         
         // there is no graceful way to respond to a failure on NSEntityDescription.entityForName, force unwrapping and forcing a crash is the desired behavior for this app
         
@@ -27,6 +27,7 @@ class Task: NSManagedObject {
         self.name = name
         self.notes = notes
         self.due = due
+        self.isComplete = isComplete
     }
 
 

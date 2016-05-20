@@ -9,9 +9,53 @@
 import UIKit
 
 class TaskDetailTableViewController: UITableViewController {
+    
+    var task: Task?
+    var dueDateValue: NSDate?
+    
+    
+    
+    //MARK: - Outlets and Properties
+    
+    
+    @IBOutlet weak var taskNameField: UITextField!
+    
+    @IBOutlet weak var taskDueField: UITextField!
+    
+    @IBOutlet weak var taskNotesField: UITextView!
+    
+    @IBOutlet var dueDatePicker: UIDatePicker!
+    
+    
+    //Mark: - Actions
+    
+    
+    @IBAction func saveButtonTapped(sender: AnyObject) {
+        
+    }
+    
+    
+    @IBAction func datePickerValueChanged(sender: UIDatePicker) {
+    }
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    //Mark: life cycles
+    
+    
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        textfield.inputeView = dueDatePicker
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -20,11 +64,27 @@ class TaskDetailTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    //MARK: - Life Cycles
+    
+    
+    func updateWithTask(task: Task) {
+        self.task = task
+        
+        title = task.name
+        taskNameField.text = task.name
+        
+        if let due = task.due {
+            taskDueField.text = due.stringValue() 
+        }
+        
+        if let notes = task.notes {
+            taskNotesField.text = notes // This is a view and i named it a field -_-
+        }
+        
     }
-
+    
+    
+    
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {

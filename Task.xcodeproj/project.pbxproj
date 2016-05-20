@@ -20,6 +20,7 @@
 		75517E6C1CEE5569000BC03C /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75517E6A1CEE5569000BC03C /* Task+CoreDataProperties.swift */; };
 		75517E6D1CEE5569000BC03C /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75517E6B1CEE5569000BC03C /* Task.swift */; };
 		75517E6F1CEE59D7000BC03C /* TaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75517E6E1CEE59D7000BC03C /* TaskController.swift */; };
+		75517E711CEE8A42000BC03C /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75517E701CEE8A42000BC03C /* DateHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		75517E6A1CEE5569000BC03C /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		75517E6B1CEE5569000BC03C /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		75517E6E1CEE59D7000BC03C /* TaskController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskController.swift; sourceTree = "<group>"; };
+		75517E701CEE8A42000BC03C /* DateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				75517E601CEE5303000BC03C /* TaskListTableViewController.swift */,
+				75517E701CEE8A42000BC03C /* DateHelper.swift */,
 				75517E621CEE53E4000BC03C /* TaskDetailTableViewController.swift */,
 			);
 			name = "View Controllers";
@@ -287,6 +290,7 @@
 				68D78A261BD6C26500509A87 /* AppDelegate.swift in Sources */,
 				75517E6C1CEE5569000BC03C /* Task+CoreDataProperties.swift in Sources */,
 				75517E6D1CEE5569000BC03C /* Task.swift in Sources */,
+				75517E711CEE8A42000BC03C /* DateHelper.swift in Sources */,
 				75517E6F1CEE59D7000BC03C /* TaskController.swift in Sources */,
 				75517E631CEE53E4000BC03C /* TaskDetailTableViewController.swift in Sources */,
 			);
