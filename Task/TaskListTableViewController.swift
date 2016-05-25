@@ -54,12 +54,12 @@ class TaskListTableViewController: UITableViewController {
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            guard let task = TaskController.sharedInstance.objectAtIndexPath(indexPath) as? Task else {
+           guard let task = TaskController.sharedInstance.objectAtIndexPath(indexPath) as? Task else {
                 return
             }
             TaskController.sharedInstance.removeTask(task)
-        }    
-    }
+        }
+    
     
 
     /*
@@ -77,14 +77,22 @@ class TaskListTableViewController: UITableViewController {
     }
     */
 
-    /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "addTask" {
+            guard let indexPath = tableView.indexPathForSeletedRow,
+                task = TaskController.sharedInstance.objectAtIndexPath(indexPath) as? Task else {
+                    return
+            }
+            let destinationViewController = segue.destinationViewController as? TaskDetailTableViewController
+            destinationViewController?.task = task
+        }
+        
+    }d
+        
+        
+}
 }

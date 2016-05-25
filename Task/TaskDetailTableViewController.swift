@@ -32,12 +32,21 @@ class TaskDetailTableViewController: UITableViewController {
     
     @IBAction func saveButtonTapped(sender: AnyObject) {
         
+        
+    }
+    
+    @IBAction func userTappedView(sender: AnyObject) {
+        self.taskDueField.resignFirstResponder()
+        self.taskNotesField.resignFirstResponder()
+        self.taskNameField.resignFirstResponder()
     }
     
     
     @IBAction func datePickerValueChanged(sender: UIDatePicker) {
+        self.taskDueField.text = sender.date.stringValue()  // This sends the date to the text field as a string. Which is readable
+        self.dueDateValue = sender.date // This implements the action to store the updated date value
     }
-        
+    
     
     
     
@@ -55,7 +64,7 @@ class TaskDetailTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        textfield.inputeView = dueDatePicker
+        taskDueField.inputView = dueDatePicker
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
