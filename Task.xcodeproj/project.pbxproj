@@ -16,6 +16,9 @@
 		75DC42681CF63CD8007BA501 /* TaskListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DC42671CF63CD8007BA501 /* TaskListTableViewController.swift */; };
 		75DC426A1CF63D92007BA501 /* TaskDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DC42691CF63D92007BA501 /* TaskDetailTableViewController.swift */; };
 		75DC426C1CF63F94007BA501 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DC426B1CF63F94007BA501 /* Stack.swift */; };
+		75DC426F1CF64073007BA501 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 75DC426D1CF64073007BA501 /* Model.xcdatamodeld */; };
+		75DC42721CF641CF007BA501 /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DC42701CF641CF007BA501 /* Task+CoreDataProperties.swift */; };
+		75DC42731CF641CF007BA501 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DC42711CF641CF007BA501 /* Task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		75DC42671CF63CD8007BA501 /* TaskListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskListTableViewController.swift; sourceTree = "<group>"; };
 		75DC42691CF63D92007BA501 /* TaskDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskDetailTableViewController.swift; sourceTree = "<group>"; };
 		75DC426B1CF63F94007BA501 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		75DC426E1CF64073007BA501 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		75DC42701CF641CF007BA501 /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		75DC42711CF641CF007BA501 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,7 @@
 		68D78A241BD6C26500509A87 /* Task */ = {
 			isa = PBXGroup;
 			children = (
+				75DC42741CF641D8007BA501 /* Model */,
 				68D78A251BD6C26500509A87 /* AppDelegate.swift */,
 				68D78A291BD6C26500509A87 /* Main.storyboard */,
 				75DC426B1CF63F94007BA501 /* Stack.swift */,
@@ -129,6 +136,16 @@
 				68D78A471BD6C26500509A87 /* Info.plist */,
 			);
 			path = TaskUITests;
+			sourceTree = "<group>";
+		};
+		75DC42741CF641D8007BA501 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				75DC42701CF641CF007BA501 /* Task+CoreDataProperties.swift */,
+				75DC42711CF641CF007BA501 /* Task.swift */,
+				75DC426D1CF64073007BA501 /* Model.xcdatamodeld */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,7 +280,10 @@
 			files = (
 				75DC426C1CF63F94007BA501 /* Stack.swift in Sources */,
 				75DC42681CF63CD8007BA501 /* TaskListTableViewController.swift in Sources */,
+				75DC426F1CF64073007BA501 /* Model.xcdatamodeld in Sources */,
 				68D78A261BD6C26500509A87 /* AppDelegate.swift in Sources */,
+				75DC42721CF641CF007BA501 /* Task+CoreDataProperties.swift in Sources */,
+				75DC42731CF641CF007BA501 /* Task.swift in Sources */,
 				75DC426A1CF63D92007BA501 /* TaskDetailTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -512,6 +532,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		75DC426D1CF64073007BA501 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				75DC426E1CF64073007BA501 /* Model.xcdatamodel */,
+			);
+			currentVersion = 75DC426E1CF64073007BA501 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 68D78A1A1BD6C26400509A87 /* Project object */;
 }
