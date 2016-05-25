@@ -24,7 +24,7 @@ class Task: NSManagedObject {
         self.name = name
         self.notes = notes
         self.due = due
-        self.isComplete = false
+        
         // set properties here
     }
 
