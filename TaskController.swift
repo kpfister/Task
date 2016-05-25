@@ -35,7 +35,7 @@ class TaskController {
     }
     
     
-    // MARK: CRUD methods
+    // MARK: CRUD methods -
     
     func addTask(name: String, notes: String?, due: NSDate?) {
         
@@ -54,9 +54,22 @@ class TaskController {
     }
     
     func fecthTasks() -> [Task] {
-        return[]
+        return mockTasks
     }
     
+    // MARK: Mock Data -
+    
+    var mockTasks: [Task] {
+    
+        let taskOne = Task(name: "Go home", notes: "Time to drink myself stupid")
+        taskOne.isComplete = true
+        
+        let taskTwo = Task(name: "Games", notes: "Overwatch time")
+        
+        return [taskOne, taskTwo]
+        
+        
+    }
     
 }
 
