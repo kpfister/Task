@@ -9,7 +9,7 @@
 import UIKit
 
 class TaskDetailTableViewController: UITableViewController {
-
+    var dueDateValue: NSDate?
     
     //MARK: Outlets -
     
@@ -20,6 +20,7 @@ class TaskDetailTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        dueTextField.inputView = taskDatePicker
     }
 
     
@@ -28,6 +29,19 @@ class TaskDetailTableViewController: UITableViewController {
     @IBAction func saveButtonTapped(sender: AnyObject) {
         
     }
+    
+    @IBAction func datePickerValueChanged(sender: UIDatePicker) {
+        
+        self.dueDateValue = sender.date
+    }
+    
+    @IBAction func userTappedView(sender: AnyObject) {
+        titleTextField.resignFirstResponder()
+        dueTextField.resignFirstResponder()
+        notesTextView.resignFirstResponder()
+    }
+    
+    
     
     // MARK: LifeCyle Methods - 
     
