@@ -13,31 +13,33 @@ class TaskController {
     
     static let sharedInstance = TaskController()
     
-    // MARK: Task Property
-    
-    var tasks: [Task] = []
-    
-    // : Computed Properties
-    
-    var completedTasks: [Task] {
-        let request = NSFetchRequest(entityName: "Task")
-        let moc = Stack.sharedStack.managedObjectContext
-        let tasks = (try? moc.executeFetchRequest(request)) as? [Task] ?? []
-        return tasks.filter({$0.isComplete.boolValue})
-        
-    }
-    
-    var inCompleteTasks: [Task] {
-        let request = NSFetchRequest(entityName: "Taks")
-        let moc = Stack.sharedStack.managedObjectContext
-        let tasks = (try? moc.executeFetchRequest(request)) as? [Task] ?? []
-        return tasks.filter({!$0.isComplete.boolValue})
-    }
+//    // MARK: Task Property
+//    
+//    var tasks: [Task] = []
+//    
+//    // : Computed Properties
+//    
+//    var completedTasks: [Task] {
+//        let request = NSFetchRequest(entityName: "Task")
+//        let moc = Stack.sharedStack.managedObjectContext
+//        let tasks = (try? moc.executeFetchRequest(request)) as? [Task] ?? []
+//        return tasks.filter({$0.isComplete.boolValue})
+//        
+//    }
+//    
+//    var inCompleteTasks: [Task] {
+//        let request = NSFetchRequest(entityName: "Taks")
+//        let moc = Stack.sharedStack.managedObjectContext
+//        let tasks = (try? moc.executeFetchRequest(request)) as? [Task] ?? []
+//        return tasks.filter({!$0.isComplete.boolValue})
+//    }
     
     
     // MARK: CRUD methods -
     
     func addTask(name: String, notes: String?, due: NSDate?) {
+        let _ = Task(name: name, notes: notes, due: due)
+        saveToPersistentStore()
         
     }
     
@@ -46,6 +48,10 @@ class TaskController {
     }
     
     func updateTask(task: Task, name: String, notes: String?, due: NSDate?, isComplete: Bool) {
+        task.name = name
+        task.notes = notes
+        task.due = due
+        saveToPersistentStore()
         
     }
     
@@ -56,6 +62,8 @@ class TaskController {
     func fecthTasks() -> [Task] {
         return mockTasks
     }
+    
+    // Mark: Persistence - 
     
     // MARK: Mock Data -
     

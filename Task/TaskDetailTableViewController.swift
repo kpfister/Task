@@ -13,6 +13,8 @@ class TaskDetailTableViewController: UITableViewController {
     
     //MARK: Outlets -
     
+    var task: Task?
+    
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var dueTextField: UITextField!
     @IBOutlet weak var notesTextView: UITextView!

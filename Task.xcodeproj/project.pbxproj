@@ -13,7 +13,6 @@
 		68D78A301BD6C26500509A87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68D78A2E1BD6C26500509A87 /* LaunchScreen.storyboard */; };
 		68D78A3B1BD6C26500509A87 /* TaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D78A3A1BD6C26500509A87 /* TaskTests.swift */; };
 		68D78A461BD6C26500509A87 /* TaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D78A451BD6C26500509A87 /* TaskUITests.swift */; };
-		75DC42681CF63CD8007BA501 /* TaskListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DC42671CF63CD8007BA501 /* TaskListTableViewController.swift */; };
 		75DC426A1CF63D92007BA501 /* TaskDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DC42691CF63D92007BA501 /* TaskDetailTableViewController.swift */; };
 		75DC426C1CF63F94007BA501 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DC426B1CF63F94007BA501 /* Stack.swift */; };
 		75DC426F1CF64073007BA501 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 75DC426D1CF64073007BA501 /* Model.xcdatamodeld */; };
@@ -52,7 +51,6 @@
 		68D78A411BD6C26500509A87 /* TaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		68D78A451BD6C26500509A87 /* TaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskUITests.swift; sourceTree = "<group>"; };
 		68D78A471BD6C26500509A87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		75DC42671CF63CD8007BA501 /* TaskListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskListTableViewController.swift; sourceTree = "<group>"; };
 		75DC42691CF63D92007BA501 /* TaskDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskDetailTableViewController.swift; sourceTree = "<group>"; };
 		75DC426B1CF63F94007BA501 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		75DC426E1CF64073007BA501 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -115,7 +113,6 @@
 				75DC42771CF643C8007BA501 /* TaskController.swift */,
 				75DC426B1CF63F94007BA501 /* Stack.swift */,
 				75DC42691CF63D92007BA501 /* TaskDetailTableViewController.swift */,
-				75DC42671CF63CD8007BA501 /* TaskListTableViewController.swift */,
 				68D78A2C1BD6C26500509A87 /* Assets.xcassets */,
 				68D78A2E1BD6C26500509A87 /* LaunchScreen.storyboard */,
 				68D78A311BD6C26500509A87 /* Info.plist */,
@@ -282,7 +279,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				75DC426C1CF63F94007BA501 /* Stack.swift in Sources */,
-				75DC42681CF63CD8007BA501 /* TaskListTableViewController.swift in Sources */,
 				75DC426F1CF64073007BA501 /* Model.xcdatamodeld in Sources */,
 				68D78A261BD6C26500509A87 /* AppDelegate.swift in Sources */,
 				75DC42721CF641CF007BA501 /* Task+CoreDataProperties.swift in Sources */,

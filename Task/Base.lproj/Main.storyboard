@@ -162,11 +162,7 @@
                         <action selector="datePickerValueChanged:" destination="bsa-m1-8Kc" eventType="valueChanged" id="GFH-ec-ZAh"/>
                     </connections>
                 </datePicker>
-                <tapGestureRecognizer id="VHg-Ze-kFZ">
-                    <connections>
-                        <action selector="userTappedView:" destination="bsa-m1-8Kc" id="bzV-jH-9EF"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <tapGestureRecognizer id="VHg-Ze-kFZ"/>
             </objects>
             <point key="canvasLocation" x="1803" y="393"/>
         </scene>
