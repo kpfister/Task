@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8ZD-Cu-RWa">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Task List Table View Controller-->
@@ -51,14 +52,77 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
-                            <tableViewSection headerTitle="Section-1" id="KFb-IW-piK">
+                            <tableViewSection headerTitle="Name" id="KFb-IW-piK">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="1DV-0R-e3o">
                                         <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1DV-0R-e3o" id="uDH-hY-fh2">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Task Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7CE-xD-kfE">
+                                                    <rect key="frame" x="8" y="7" width="584" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="7CE-xD-kfE" firstAttribute="centerY" secondItem="uDH-hY-fh2" secondAttribute="centerY" id="3Ba-i5-35u"/>
+                                                <constraint firstItem="7CE-xD-kfE" firstAttribute="leading" secondItem="uDH-hY-fh2" secondAttribute="leadingMargin" id="h1i-e6-jSZ"/>
+                                                <constraint firstItem="7CE-xD-kfE" firstAttribute="trailing" secondItem="uDH-hY-fh2" secondAttribute="trailingMargin" id="xqz-Lc-2iX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Due" id="W5e-lT-5uT">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="zY0-7J-6ce">
+                                        <rect key="frame" x="0.0" y="164" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zY0-7J-6ce" id="9NL-YU-Iyx">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IuU-ah-Q16">
+                                                    <rect key="frame" x="8" y="8" width="584" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="IuU-ah-Q16" firstAttribute="top" secondItem="9NL-YU-Iyx" secondAttribute="topMargin" id="IED-Uk-P0x"/>
+                                                <constraint firstItem="IuU-ah-Q16" firstAttribute="leading" secondItem="9NL-YU-Iyx" secondAttribute="leadingMargin" id="Vpt-eA-9CE"/>
+                                                <constraint firstItem="IuU-ah-Q16" firstAttribute="trailing" secondItem="9NL-YU-Iyx" secondAttribute="trailingMargin" id="qAe-UV-1L0"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Notes" id="Vim-aa-tAr">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="355" id="OiU-kh-Bjn">
+                                        <rect key="frame" x="0.0" y="236" width="600" height="355"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OiU-kh-Bjn" id="d3c-1W-4YT">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="355"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rRC-VL-j2P">
+                                                    <rect key="frame" x="8" y="8" width="584" height="339"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="rRC-VL-j2P" firstAttribute="top" secondItem="d3c-1W-4YT" secondAttribute="topMargin" id="WlK-dC-sP2"/>
+                                                <constraint firstItem="rRC-VL-j2P" firstAttribute="centerY" secondItem="d3c-1W-4YT" secondAttribute="centerY" id="cnk-Kb-f9p"/>
+                                                <constraint firstItem="rRC-VL-j2P" firstAttribute="trailing" secondItem="d3c-1W-4YT" secondAttribute="trailingMargin" id="fic-F9-cfu"/>
+                                                <constraint firstItem="rRC-VL-j2P" firstAttribute="leading" secondItem="d3c-1W-4YT" secondAttribute="leadingMargin" id="gV2-zk-C01"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -69,8 +133,28 @@
                             <outlet property="delegate" destination="bsa-m1-8Kc" id="6dj-Gg-Olm"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="AK3-28-hEC">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ia7-hc-4nw">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="bsa-m1-8Kc" id="DmR-lr-xSL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="dueTextField" destination="IuU-ah-Q16" id="mu5-5f-Kv8"/>
+                        <outlet property="notesTextView" destination="rRC-VL-j2P" id="bYV-bG-2bP"/>
+                        <outlet property="taskDatePicker" destination="c2U-GK-Fx1" id="POy-hS-Y8J"/>
+                        <outlet property="titleTextField" destination="7CE-xD-kfE" id="2xj-eR-0j7"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lsW-MR-B7M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" id="c2U-GK-Fx1">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <date key="date" timeIntervalSinceReferenceDate="485917228.41890299">
+                        <!--2016-05-26 01:00:28 +0000-->
+                    </date>
+                </datePicker>
             </objects>
             <point key="canvasLocation" x="1803" y="393"/>
         </scene>
