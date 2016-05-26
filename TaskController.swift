@@ -13,26 +13,27 @@ class TaskController {
     
     static let sharedInstance = TaskController()
     
-//    // MARK: Task Property
-//    
-//    var tasks: [Task] = []
-//    
-//    // : Computed Properties
-//    
-//    var completedTasks: [Task] {
-//        let request = NSFetchRequest(entityName: "Task")
-//        let moc = Stack.sharedStack.managedObjectContext
-//        let tasks = (try? moc.executeFetchRequest(request)) as? [Task] ?? []
-//        return tasks.filter({$0.isComplete.boolValue})
-//        
-//    }
-//    
-//    var inCompleteTasks: [Task] {
-//        let request = NSFetchRequest(entityName: "Taks")
-//        let moc = Stack.sharedStack.managedObjectContext
-//        let tasks = (try? moc.executeFetchRequest(request)) as? [Task] ?? []
-//        return tasks.filter({!$0.isComplete.boolValue})
-//    }
+    let fectchedResultsController: NSFetchedResultsController
+    
+    init () {
+        let request = NSFetchRequest(entityName: "Task")
+        let isCompletedSortDescriptor = NSSortDescriptor(key: "isComplete", ascending: false)
+        let dueSortDescriptor = NSSortDescriptor(key: "due", ascending: false)
+        request.sortDescriptors = [isCompletedSortDescriptor, dueSortDescriptor]
+        self.fectchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: Stack.sharedStack.managedObjectContext, sectionNameKeyPath: "isComplete", cacheName: nil)
+        _ = try? fectchedResultsController.performFetch()
+    }
+    
+    
+    
+    
+
+    
+ //isComplete and then Due
+    
+    
+    
+    
     
     
     // MARK: CRUD methods -
@@ -82,17 +83,23 @@ class TaskController {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//    // MARK: Task Property
+//
+//    var tasks: [Task] = []
+//
+//    // : Computed Properties
+//
+//    var completedTasks: [Task] {
+//        let request = NSFetchRequest(entityName: "Task")
+//        let moc = Stack.sharedStack.managedObjectContext
+//        let tasks = (try? moc.executeFetchRequest(request)) as? [Task] ?? []
+//        return tasks.filter({$0.isComplete.boolValue})
+//
+//    }
+//
+//    var inCompleteTasks: [Task] {
+//        let request = NSFetchRequest(entityName: "Taks")
+//        let moc = Stack.sharedStack.managedObjectContext
+//        let tasks = (try? moc.executeFetchRequest(request)) as? [Task] ?? []
+//        return tasks.filter({!$0.isComplete.boolValue})
+//    }
