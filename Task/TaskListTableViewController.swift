@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import CoreData
 
-class TaskListTableViewController: UITableViewController {
+class TaskListTableViewController: UITableViewController, NSFetchedResultsControllerDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
